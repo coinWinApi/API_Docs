@@ -22,11 +22,21 @@
 [/api/Pay/getOrderHistory](#getOrderHistory)	|Get|请求用户收币历史记录
 [/api/ticker](#ticker)	|Get|获取服务器上当前币种的人民币价格
 [/api/time](#time)	|Get|获取服务器当前时间
+[商户回调](#callback)	|Get|商户回调
 
 <span id="Pay">
 
 #### /api/Pay 请求收币地址
+请求参数:
 
+参数名称|是否必须|类型|描述|默认值|取值范围
+----------------------|---------------------|-----------------------------|----------------------|---------------------|-----------------------------|
+symbol	|true|string|币种，如btc|btc|btc、usdt
+openid	|true|string|商户系统中用户的id||
+remark	|false|string|预留字段，商户的自定义参数，将在回调中返回该数据||
+accessKey	|true|string|商户向支付系统申请的key||
+timestamp	|true|long|0时区的毫秒级时间戳||
+sign	|true|string|签名，用申请的secret对请求的url（包括请求头参数）进行HMACSHA256加密，形成sign参数||
 
 </span>
 
@@ -58,8 +68,16 @@
 
 </span>
 
+<span id="callback">
+
+### 商户回调说明
+
+
+</span>
+
 # 各语言示例
 
 ## PHP<br>
- >  [仅供参考](https://github.com/coinWinApi/Api-PHP)<br>
+ >  [介绍](https://github.com/coinWinApi/Api-PHP)<br>
+ >  [示例](https://github.com/coinWinApi/Api-PHP-Demo)<br>
 
