@@ -24,30 +24,35 @@
 [/api/time](#time)	|Get|获取服务器当前时间
 
 <span id="Pay">
+
 #### /api/Pay 请求收币地址
 
 
 </span>
 
 <span id="getbalance">
+
 #### /api/Pay/getbalance 请求未确认余额
 
 
 </span>
 
 <span id="getOrderHistory">
+
 #### /api/Pay/getbalance 请求用户收币历史记录
 
 
 </span>
 
 <span id="ticker">
+
 #### /api/Pay/getbalance 获取服务器上当前币种的人民币价格
 
 
 </span>
 
 <span id="time">
+
 #### /api/Pay/getbalance 获取服务器当前时间
 
 
