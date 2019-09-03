@@ -1,11 +1,12 @@
 # 币赢钱包API文档
 
-目前开放了支付模块的api，需要商户与我们联系开户，我们将提供key与secret，商户请求接口需用key与secret做签名认证
+目前开放了支付模块的api，需要商户与我们联系开户，我们将提供key与secret，并提供后台结算系统的账号，商户请求接口需用key与secret做签名认证,
 
 
 # 币支付接口说明
 
 * 目前币赢钱包支持安卓与ios，[点击下载币赢钱包](https://yysyservice.com:8996/down.html)
+* [币支付后台代理结算系统](https://yysyservice.com:20006/)
 * 接口请求的基础url为 https://yysyservice.com:20002
 * 签名说明：这里的签名采用sha256对请求接口的url与参数带上key与时间戳(毫秒级-长度是13位的)进行加密得到密文，然后在请求中将密文赋给sign参数加进请求头里。
 例如：get请求 https://yysyservice:20002/api/Pay   参数有symbol、openid、remark，则需要对 http://yysyservice:20002/api/Pay?accessKey=****&openid=1001&remark=111&symbol=usdt&timestamp=1567412503000 进行sha256加密（注意参数的排序是按照键进行升序排序的）然后在请求头里带上sign参数，值就是得到的密文
