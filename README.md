@@ -17,6 +17,7 @@
   "data": "string"
 }
 ~~~~
+* ## [各编程语言示例Demo](#demo)
 
 ## 接口列表
 
@@ -240,9 +241,12 @@ msg	|true|string|若失败请返回错误信息||
 
 </span>
 
+<span id="demo">
+
 # 各语言示例
 
 ## PHP<br>
  >  [介绍](https://github.com/coinWinApi/Api-PHP)<br>
  >  [示例](https://github.com/coinWinApi/Api-PHP-Demo)<br>
 
+</span>
