@@ -6,7 +6,7 @@
 # 币支付接口说明
 
 * 目前币赢钱包支持安卓与ios，[点击下载币赢钱包](https://yysyservice.com:8996/down.html)
-* [币支付后台代理结算系统](http://yysyservice.com:20006/)
+* [币支付后台代理结算系统](http://yysyservice.com:20006/)，若无法打开链接，请在浏览器器手动输入http://yysyservice.com:20006/ ，注意是http，某些浏览器会自动将http改为https
 * 接口请求的基础url为 https://yysyservice.com:20002
 * 签名说明：这里的签名采用sha256对请求接口的url与参数带上key与时间戳(毫秒级-长度是13位的)进行加密得到密文，然后在请求中将密文赋给sign参数加进请求头里。
 例如：get请求 https://yysyservice:20002/api/Pay   参数有symbol、openid、remark，则需要对 http://yysyservice:20002/api/Pay?accessKey=****&openid=1001&remark=111&symbol=usdt&timestamp=1567412503000 进行sha256加密（注意参数的排序是按照键进行升序排序的）然后在请求头里带上sign参数，值就是得到的密文
