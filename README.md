@@ -27,7 +27,7 @@
 [/api/Pay/getOrderHistory](#getOrderHistory)	|Get|请求用户收币历史记录
 [/api/ticker](#ticker)	|Get|获取服务器上当前币种的人民币价格
 [/api/time](#time)	|Get|获取服务器当前时间
-[商户回调](#callback)	|Get|商户回调
+[商户回调(请仔细阅读)](#callback)	|Get|商户回调
 
 <span id="Pay">
 
