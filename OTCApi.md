@@ -2,35 +2,42 @@
 
 * [返回文档首页](https://github.com/coinWinApi/API_Docs)
 
-目前开放了B端商户下单api，，我们将提供B端商户accessKey，需要使用我们提供的accessKey，具体接口与回调流程请阅读以下文本。
+目前开放了B端商户下单api，，我们将提供B端商户accessKey与secretKey,accessKey用来授权，secretKey用来签名，切勿暴露accessKey与secretKey，具体接口与回调流程请阅读以下文本。
 # 接口说明
-- 签名说明：这里的签名采用sha256对请求接口的url与参数带上key与时间戳(毫秒级-长度是13位的)进行加密得到密文，然后在请求中将密文赋给sign参数加进请求头里。 例如：get请求api/Pay 参数有symbol、openid、remark，则需要对 api/Pay?accessKey=****&symbolId=1001&orderBuyType=2&value=100&payId=1&timestamp=1567412503000 进行sha256加密（注意参数的排序是按照键进行升序排序的）然后在请求头里带上sign参数，值就是得到的密文
-- 只要请求正常，接口统一返回200状态码，返回的Json格式为
-~~~~
-{
-  "success": true,
-  "data": "string"
-}
-~~~~
+- 签名说明：这里的签名采用sha256进行签名。对业务报文体的JSON对象的字符串签名。
+- 签名key：secretKey 【secretKey由接口方提供】
+- 签名对象：
+### 业务报文体的JSON对象的 字符串 
 
-### 接口列表
 
-|接口方法|类型|说明|
+#### 接口列表 (注：Data为业务报文体，json对象，该对象的key切记务必要小写，不然无法验签通过)
+
+|接口地址|请求方式|接口说明|
 | --------   | -----  | ----  |
-|tripleotc/ad/OrderVerify|post|B端商户下单|
+|tripleotc/ad/OrderVerify|post|B端商户下单接口|
 
 ### 请求参数
-
 |参数名称|是否必须|类型|描述|默认值|取值范围|
 | --------   | -----  | ----  | ----  | ----  | ----  |
-|symbolId|true|int|币种Id|无|1011(usdt)|
-|orderBuyType|true|int|按数量|无|1--代表按金额|
-|value|true|decimal|数值|无||
-|payId|true|int|支付方式|无|1-支付宝，2-微信，3-银联|
-
+|AccessKey|true|string|授权key|无|接口方提供|
+|TimeStamp|true|string|（当前时间）毫秒级精度|无|时间戳，例：1567412503000|
+|Signature|true|string|签名数据|无||
+|Data|true|json|业务报文体|无||
+| --------   | -----  | ----  | ----  | ----  | ----  |
+|Data业务报文体参数名称|是否必须|类型|描述|默认值|取值范围|
+|Data.accesskey|true|string|授权key|无|接口方提供|
+|Data.timestamp|true|string|（当前时间）毫秒级精度|无|时间戳|
+|Data.symbolid|true|int|币种Id|1011|1011(usdt)|
+|Data.orderbuytype|true|int|按金额|1|1--代表按金额|
+|Data.value|true|decimal|金额|无||
+|Data.payid|true|int|支付方式|无|1-支付宝，2-微信，3-银联|
+|Data.ordersourcetype|true|int|订单来源类型|30001|平台订单|
+| --------   | -----  | ----  | ----  | ----  | ----  |
 ### 返回参数
 
 |参数名称|是否必须|类型|描述|默认值|取值范围|
 | --------   | -----  | ----  | ----  | ----  | ----  |
-|success|true|bool|请求是否成功|true|true、false|
-|data|true|json|	若成功则返回地址，否则返回错误信息||||
+|code|true|int|业务码||200：成功、1001：失败|
+|success|true|bool|操作是否成功|true：成功 false：失败|true、false|
+|message|true|string|文本信息|||
+|data|true|json|结果业务体||||
