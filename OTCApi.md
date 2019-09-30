@@ -1,31 +1,31 @@
-#B¶ËÉÌ»§ÏÂµ¥APIÎÄµµ
-Ä¿Ç°¿ª·ÅÁËB¶ËÉÌ»§ÏÂµ¥api£¬£¬ÎÒÃÇ½«Ìá¹©B¶ËÉÌ»§accessKey£¬ÐèÒªÊ¹ÓÃÎÒÃÇÌá¹©µÄaccessKey£¬¾ßÌå½Ó¿ÚÓë»Øµ÷Á÷³ÌÇëÔÄ¶ÁÒÔÏÂÎÄ±¾¡£
-#½Ó¿ÚËµÃ÷
-- Ç©ÃûËµÃ÷£ºÕâÀïµÄÇ©Ãû²ÉÓÃsha256¶ÔÇëÇó½Ó¿ÚµÄurlÓë²ÎÊý´øÉÏkeyÓëÊ±¼ä´Á(ºÁÃë¼¶-³¤¶ÈÊÇ13Î»µÄ)½øÐÐ¼ÓÃÜµÃµ½ÃÜÎÄ£¬È»ºóÔÚÇëÇóÖÐ½«ÃÜÎÄ¸³¸øsign²ÎÊý¼Ó½øÇëÇóÍ·Àï¡£ ÀýÈç£ºgetÇëÇóapi/Pay ²ÎÊýÓÐsymbol¡¢openid¡¢remark£¬ÔòÐèÒª¶Ô api/Pay?accessKey=****&symbolId=1001&orderBuyType=2&value=100&payId=1&timestamp=1567412503000 ½øÐÐsha256¼ÓÃÜ£¨×¢Òâ²ÎÊýµÄÅÅÐòÊÇ°´ÕÕ¼ü½øÐÐÉýÐòÅÅÐòµÄ£©È»ºóÔÚÇëÇóÍ·Àï´øÉÏsign²ÎÊý£¬Öµ¾ÍÊÇµÃµ½µÄÃÜÎÄ
-- Ö»ÒªÇëÇóÕý³££¬½Ó¿ÚÍ³Ò»·µ»Ø200×´Ì¬Âë£¬·µ»ØµÄJson¸ñÊ½Îª ?
+# Bç«¯å•†æˆ·ä¸‹å•APIæ–‡æ¡£
+ç›®å‰å¼€æ”¾äº†Bç«¯å•†æˆ·ä¸‹å•apiï¼Œï¼Œæˆ‘ä»¬å°†æä¾›Bç«¯å•†æˆ·accessKeyï¼Œéœ€è¦ä½¿ç”¨æˆ‘ä»¬æä¾›çš„accessKeyï¼Œå…·ä½“æŽ¥å£ä¸Žå›žè°ƒæµç¨‹è¯·é˜…è¯»ä»¥ä¸‹æ–‡æœ¬ã€‚
+# æŽ¥å£è¯´æ˜Ž
+- ç­¾åè¯´æ˜Žï¼šè¿™é‡Œçš„ç­¾åé‡‡ç”¨sha256å¯¹è¯·æ±‚æŽ¥å£çš„urlä¸Žå‚æ•°å¸¦ä¸Škeyä¸Žæ—¶é—´æˆ³(æ¯«ç§’çº§-é•¿åº¦æ˜¯13ä½çš„)è¿›è¡ŒåŠ å¯†å¾—åˆ°å¯†æ–‡ï¼Œç„¶åŽåœ¨è¯·æ±‚ä¸­å°†å¯†æ–‡èµ‹ç»™signå‚æ•°åŠ è¿›è¯·æ±‚å¤´é‡Œã€‚ ä¾‹å¦‚ï¼šgetè¯·æ±‚api/Pay å‚æ•°æœ‰symbolã€openidã€remarkï¼Œåˆ™éœ€è¦å¯¹ api/Pay?accessKey=****&symbolId=1001&orderBuyType=2&value=100&payId=1&timestamp=1567412503000 è¿›è¡Œsha256åŠ å¯†ï¼ˆæ³¨æ„å‚æ•°çš„æŽ’åºæ˜¯æŒ‰ç…§é”®è¿›è¡Œå‡åºæŽ’åºçš„ï¼‰ç„¶åŽåœ¨è¯·æ±‚å¤´é‡Œå¸¦ä¸Šsignå‚æ•°ï¼Œå€¼å°±æ˜¯å¾—åˆ°çš„å¯†æ–‡
+- åªè¦è¯·æ±‚æ­£å¸¸ï¼ŒæŽ¥å£ç»Ÿä¸€è¿”å›ž200çŠ¶æ€ç ï¼Œè¿”å›žçš„Jsonæ ¼å¼ä¸º ?
 {
   "success": true,
   "data": "string"
 }
 
-###½Ó¿ÚÁÐ±í
+### æŽ¥å£åˆ—è¡¨
 
-|½Ó¿Ú·½·¨|ÀàÐÍ|ËµÃ÷|
+|æŽ¥å£æ–¹æ³•|ç±»åž‹|è¯´æ˜Ž|
 | --------   | -----:  | :----:  |
-|tripleotc/ad/OrderVerify|post|B¶ËÉÌ»§ÏÂµ¥|
+|tripleotc/ad/OrderVerify|post|Bç«¯å•†æˆ·ä¸‹å•|
 
-tripleotc/ad/OrderVerify B¶ËÉÌ»§ÏÂµ¥
+tripleotc/ad/OrderVerify Bç«¯å•†æˆ·ä¸‹å•
 
-###ÇëÇó²ÎÊý
-|²ÎÊýÃû³Æ|ÊÇ·ñ±ØÐë|ÀàÐÍ|ÃèÊö|Ä¬ÈÏÖµ|È¡Öµ·¶Î§|
+### è¯·æ±‚å‚æ•°
+|å‚æ•°åç§°|æ˜¯å¦å¿…é¡»|ç±»åž‹|æè¿°|é»˜è®¤å€¼|å–å€¼èŒƒå›´|
 | --------   | -----:  | :----:  |
-|symbolId|true|int|±ÒÖÖId|ÎÞ|1011(usdt)|
-|orderBuyType|true|int|°´ÊýÁ¿|ÎÞ|1--´ú±í°´½ð¶î|
-|value|true|decimal|ÊýÖµ|ÎÞ||
-|payId|true|int|Ö§¸¶·½Ê½|ÎÞ|1-Ö§¸¶±¦£¬2-Î¢ÐÅ£¬3-ÒøÁª|
+|symbolId|true|int|å¸ç§Id|æ— |1011(usdt)|
+|orderBuyType|true|int|æŒ‰æ•°é‡|æ— |1--ä»£è¡¨æŒ‰é‡‘é¢|
+|value|true|decimal|æ•°å€¼|æ— ||
+|payId|true|int|æ”¯ä»˜æ–¹å¼|æ— |1-æ”¯ä»˜å®ï¼Œ2-å¾®ä¿¡ï¼Œ3-é“¶è”|
 
-###·µ»Ø²ÎÊý
-|²ÎÊýÃû³Æ|ÊÇ·ñ±ØÐë|ÀàÐÍ|ÃèÊö|Ä¬ÈÏÖµ|È¡Öµ·¶Î§|
+### è¿”å›žå‚æ•°
+|å‚æ•°åç§°|æ˜¯å¦å¿…é¡»|ç±»åž‹|æè¿°|é»˜è®¤å€¼|å–å€¼èŒƒå›´|
 | --------   | -----:  | :----:  |
-|success|true|bool|ÇëÇóÊÇ·ñ³É¹¦|true|true¡¢false|
-|data|true|json|	Èô³É¹¦Ôò·µ»ØµØÖ·£¬·ñÔò·µ»Ø´íÎóÐÅÏ¢||||
+|success|true|bool|è¯·æ±‚æ˜¯å¦æˆåŠŸ|true|trueã€false|
+|data|true|json|	è‹¥æˆåŠŸåˆ™è¿”å›žåœ°å€ï¼Œå¦åˆ™è¿”å›žé”™è¯¯ä¿¡æ¯||||
