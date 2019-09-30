@@ -1,6 +1,6 @@
 # 币支付接口说明
 
-* [返回文档首页](https://github.com/coinWinApi/API_Docs)
+[返回文档首页](https://github.com/coinWinApi/API_Docs)
 
 * 目前币赢钱包支持安卓与ios，[点击下载币赢钱包](https://yysyservice.com:8996/down.html)
 * [币支付后台代理结算系统](http://yysyservice.com:20006/)，若无法打开链接，请在浏览器器手动输入http://yysyservice.com:20006/ ，注意是http，某些浏览器会自动将http改为https
