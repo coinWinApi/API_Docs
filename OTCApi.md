@@ -13,7 +13,6 @@
 |接口方法|类型|说明|
 | --------   | -----:  | :----:  |
 |tripleotc/ad/OrderVerify|post|B端商户下单|
-
 tripleotc/ad/OrderVerify B端商户下单
 
 ### 请求参数
