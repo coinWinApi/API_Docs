@@ -32,6 +32,7 @@
 |Data.value|true|decimal|金额|无||
 |Data.payid|true|int|支付方式|无|1-支付宝，2-微信，3-银联|
 |Data.ordersourcetype|true|int|订单来源类型|30001|平台订单|
+|Data.tripleOrderId|false|string|下游订单Id |无||
 | --------   | -----  | ----  | ----  | ----  | ----  |
 ### 返回参数
 
